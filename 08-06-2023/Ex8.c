@@ -1,17 +1,17 @@
-#include<stdio.h>
-#include<unistd.h>
-#include<sys/types.h>
-#include<sys/wait.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 int main()
 {
     pid_t pid;
-    pid=vfork();
-    if(pid==-1)
+    pid = vfork();
+    if (pid == -1)
     {
         perror("vfork");
         return 1;
     }
-    else if(pid==0)
+    else if (pid == 0)
     {
         printf("Child Process: Hello, I'm the child process!\n");
         printf("Child Process: My PID is %d\n", getpid());
@@ -28,7 +28,7 @@ int main()
 
         waitpid(pid, &status, 0);
 
-        if(WIFEXITED(status))
+        if (WIFEXITED(status))
         {
             printf("Parent Process: Child terminated normally\n");
         }
