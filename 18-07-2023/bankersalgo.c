@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <conio.h>
+//include <conio.h>
 void main()
 {
-    int k = 0, output[10], d = 0, t = 0, ins[5], i, avail[5], allocated[10][5], need[10][5], max[10][5], pno, j, rz, count = 0;
+    int k = 0, output[10], d = 0, t = 0, ins[5], i, avail[5], allocated[10][5], need[10][5], max[10][5], pno, j,p[10], rz, count = 0;
     printf("\n Enter the number of resources : ");
     scanf("%d", &rz);
     printf("\n Enter the max instances of each resources\n");
@@ -20,7 +20,7 @@ void main()
     printf("\n");
     for (i = 0; i < pno; i++)
     {
-        p[i] = i
+        p[i] = i;
             printf("P[%d]  ", p[i]);
         for (j = 0; j < rz; j++)
         {
@@ -71,5 +71,5 @@ A:d = -1;
     for (i = 0; i < k; i++)
     printf(" P[%d] ", output[i]);
     printf(">");
-    getch();
+    //getch();
 }
