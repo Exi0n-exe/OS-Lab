@@ -28,4 +28,39 @@ void main()
             avail[j] += allocated[i][j];
         }
     }
+    printf("\nEnter the max matrix \n");
+    for (i = 0; i < rz; i++)
+    {
+        printf(" %c", (i + 97));
+        avail[i] = ins[i] - avail[i];
+    }
+    printf("\n");
+    for (i = 0; i < pno; i++)
+    {
+        printf("P[%d]  ", i);
+        for (j = 0; j < rz; j++)
+        scanf("%d", &max[i][j]);
+    }
+    printf("\n");
+    A: d = -1;
+    for (i = 0; i < pno; i++)
+    {
+        count = 0;
+        t = p[i];
+        for (j = 0; j < rz; j++)
+        {
+            need[t][j] = max[t][j] - allocated[t][j];
+            if (need[t][j] <= avail[j])
+                count++;
+        }
+        if (count == rz)
+        {
+            output[k++] = p[i];
+            for (j = 0; j < rz; j++)
+            avail[j] += allocated[t][j];
+        }
+        else
+            p[++d] = p[i];
+    }
+    
 }
