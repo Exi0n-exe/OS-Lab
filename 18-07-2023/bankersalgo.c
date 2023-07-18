@@ -39,10 +39,10 @@ void main()
     {
         printf("P[%d]  ", i);
         for (j = 0; j < rz; j++)
-        scanf("%d", &max[i][j]);
+            scanf("%d", &max[i][j]);
     }
     printf("\n");
-    A: d = -1;
+A:d = -1;
     for (i = 0; i < pno; i++)
     {
         count = 0;
@@ -57,10 +57,19 @@ void main()
         {
             output[k++] = p[i];
             for (j = 0; j < rz; j++)
-            avail[j] += allocated[t][j];
+                avail[j] += allocated[t][j];
         }
         else
             p[++d] = p[i];
     }
-    
+    if (d != -1)
+    {
+        pno = d + 1;
+        goto A;
+    }
+    printf("\t <");
+    for (i = 0; i < k; i++)
+    printf(" P[%d] ", output[i]);
+    printf(">");
+    getch();
 }
