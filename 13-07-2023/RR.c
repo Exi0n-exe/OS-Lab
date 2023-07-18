@@ -63,4 +63,34 @@ void main()
     avg_tat = tat * 1.0 / NOP;
     printf("\n Average Turn Around Time: \t%f", avg_wt);
     printf("\n Average Waiting Time: \t%f", avg_tat);
+    /* Total number of process in the system: 4
+
+ Enter the Arrival and Burst time of the Process[1]
+ Arrival time is:       0
+ 
+Burst time is:  5
+
+ Enter the Arrival and Burst time of the Process[2]
+ Arrival time is:       2
+ 
+Burst time is:  4
+
+ Enter the Arrival and Burst time of the Process[3]
+ Arrival time is:       3
+ 
+Burst time is:  2
+
+ Enter the Arrival and Burst time of the Process[4]
+ Arrival time is:       5
+ 
+Burst time is:  1
+Enter the Time Quantum for the process:         2
+
+ Process No              Burst Time              TAT             Waiting Time 
+Process No[3]            2                               3                       1
+Process No[4]            1                               2                       1
+Process No[2]            4                               9                       5
+Process No[1]            5                               12                      7
+ Average Turn Around Time:      3.500000
+ Average Waiting Time:  6.500000*/
 }

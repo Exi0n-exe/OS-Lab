@@ -1,19 +1,5 @@
 #include<stdio.h>
 int main(){
-    /*
-    Enter the number of processes:3
-    Enter the Arrival Time & Burst Time: 2 3
-    Enter the Arrival Time & Burst Time: 5 6 
-    Enter the Arrival Time & Burst Time: 6 7
-
-    P Name  Arr time        Burs time       Start   TAT     Finish
-    P0      2               3               2               3               5
-    P1      5               6               5               6               11
-    P2      6               7               11              12              18
-
-    Average Waiting time:1.666667
-    Average turn around time:7.000000
-    */
     int arr[10],bur[10],star[10],finish[10],tat[10],wt[10],i,n;
     int totwt=0,tottat=0;
     printf("Enter the number of processes:");
