@@ -13,8 +13,9 @@ int checkhit(int incomingPage, int queue[], int occupied)
 
 void printFrame(int queue[], int occupied)
 {
-    for (int i = 0; i < occupied; i++)
+    for (int i = 0; i < occupied; i++){
         printf("%d\t", queue[i]);
+    }
 }
 
 void main()
